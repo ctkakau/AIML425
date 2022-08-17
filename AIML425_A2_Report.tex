@@ -36,14 +36,33 @@ One, two, three, four, five
 \section{Introduction}
 \label{sec:intro}
 %
-These guidelines include complete descriptions of the fonts, spacing, and
-related information for producing your proceedings manuscripts. Please follow
-them and if you have any questions, direct them to Conference Management
-Services, Inc.: Phone +1-979-846-6800 or email
-to \\\texttt{icassp2020@cmsworkshops.com}.
+Neural networks have become a mainstay of image processing over the last two decades (compare \cite{parisi1998car} and \cite{naranjo2020review}) 
 
-\section{Objective functions and regularisation}
+\section{Objective function}
 \label{sec:format}
+
+We train a neural network using stochastic gradient descent so that it can iteratively learn and adjust from the prediction (based on each instance, or input vector) and distance from the actual target (output vector).  One of the main decisions for the design of the network is the selection of an objective function to drive the model predictions toward the target.  Although numerous objective functions are possible, this implementation uses the Maximum Mean Discrepancy which measures the distance between two distributions.  For optimisation the model aims to minimise MMD.  Before working through the theory of the MMD, we need to first briefly discuss the kernel - a concept which has taken several days of bashing, for me to finally come to grips with.  
+
+\subsection{Kernel transformation}
+\label{ssec:kernel}
+
+After several lectures, reviews of lecturs, scanning of the internet and multiple re-visits to the wikipedia, I think the kernel, is a matrix that transforms our input vector in a lower dimensional space to the dot product output vector in a higher dimensional space \cite{wilimitis_2019} \cite{hofmann2008kernel}.  I struggled alot with the concept of the kernel, because I didn't take the time to look up what an inner product means... it turns out, an inner product is the result of multiplying two vectors and resolves to a scalar value.  For instance, for the function $h(.)$ in a reproducing kernel Hilbert space, with kernel $k:$, then $h(x) =<k(x, \dot), h(\dot)>
+
+With the distribution $p_Y$ as $\frac {1}{n(n-1)}\sum_{i\ne j} k(y^{(i)}, y^{(j)})$ 
+and $p_X$ as $\frac {1}{m(m-1)}\sum_{i\ne j} k(x^{(i)}, x^{(j)})$,
+where $k(x, y)$ is a positive definite kernel (in this case, the gau
+
+$$
+\begin {aligned}
+MMD&(\{x^{(i)}\}_{i=1, ..., m}, \{y^{(j)}\}_{j=1, ..., n}) \\
+  & = \\ 
+  & + \\
+  & - 2\frac{1}{mn}\sum_{i,j}k(x^{(i)},y^{(j)})
+\end {aligned}
+$$
+
+
+
 
 The theory:  
 Why obective functions?
@@ -132,6 +151,6 @@ Here is a citation \cite{C2}.
 %\vfill\pagebreak
 
 \bibliographystyle{IEEEbib}
-\bibliography{strings,refs}
+\bibliography{refs}
 
 \end{document}
