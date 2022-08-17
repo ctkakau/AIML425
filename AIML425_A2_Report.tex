@@ -41,17 +41,28 @@ Neural networks have become a mainstay of image processing over the last two dec
 \section{Objective function}
 \label{sec:format}
 
-We train a neural network using stochastic gradient descent so that it can iteratively learn and adjust from the prediction (based on each instance, or input vector) and distance from the actual target (output vector).  One of the main decisions for the design of the network is the selection of an objective function to drive the model predictions toward the target.  Although numerous objective functions are possible, this implementation uses the Maximum Mean Discrepancy which measures the distance between two distributions.  For optimisation the model aims to minimise MMD.  Before working through the theory of the MMD, we need to first briefly discuss the kernel - a concept which has taken several days of bashing, for me to finally come to grips with.  
+We train a neural network using stochastic gradient descent so that it can iteratively learn and adjust from the prediction (based on each instance, or input vector) and distance from the actual target (output vector).  One of the main decisions for the design of the network is the selection of an objective function to drive the model predictions toward the target.  Although numerous objective functions are possible, this implementation uses the Maximum Mean Discrepancy which measures the distance between two distributions.  For optimisation the model aims to minimise MMD.  Before working through the theory of the MMD, we need to first briefly discuss the kernel - a concept which has taken several days of bashing my head against the internet wall, for me to finally come to grips with.  
 
-\subsection{Kernel transformation}
+\subsection{The kernel function reduces the complexity of calculation without sacrificing detail}
 \label{ssec:kernel}
 
-After several lectures, reviews of lecturs, scanning of the internet and multiple re-visits to the wikipedia, I think the kernel, is a matrix that transforms our input vector in a lower dimensional space to the dot product output vector in a higher dimensional space \cite{wilimitis_2019} \cite{hofmann2008kernel}.  I struggled alot with the concept of the kernel, because I didn't take the time to look up what an inner product means... it turns out, an inner product is the result of multiplying two vectors and resolves to a scalar value.  For instance, for the function $h(.)$ in a reproducing kernel Hilbert space, with kernel $k:$, then $h(x) =<k(x, \dot), h(\dot)>
+After several lectures, reviews of lecturs, scanning of the internet and multiple re-visits to the wikipedia, I think the kernel, is a matrix that transforms our input vector in a lower dimensional space to the dot product output vector in a higher dimensional space \cite{wilimitis_2019} \cite{hofmann2008kernel}.  I struggled alot with the concept of the kernel, because I didn't take the time to look up what an inner product means... it turns out, an inner product is the result of multiplying two vectors and resolves to a scalar value.  
 
-With the distribution $p_Y$ as $\frac {1}{n(n-1)}\sum_{i\ne j} k(y^{(i)}, y^{(j)})$ 
-and $p_X$ as $\frac {1}{m(m-1)}\sum_{i\ne j} k(x^{(i)}, x^{(j)})$,
-where $k(x, y)$ is a positive definite kernel (in this case, the gau
+For instance, for the function $h(\cdot)$, in a reproducing kernel Hilbert space (I can't, so here is a link to an accessible explanation...), with kernel $k:$, then $h(x) =\langle k(x, \cdot ), h ( \cdot) \rangle$.
 
+\subsection{Maximum Mean Distribution as the objective function}
+\label{ssec:mmd}
+
+With the distribution $p_Y$ as:  
+
+$\frac {1}{n(n-1)}\sum_{i\ne j} k(y^{(i)}, y^{(j)})$  
+
+and $p_X$ as:   
+
+$\frac {1}{m(m-1)}\sum_{i\ne j} k(x^{(i)}, x^{(j)})$,  
+
+where $k(x, y)$ is a positive definite kernel (in this case, the Gaussian
+kernel 
 $$
 \begin {aligned}
 MMD&(\{x^{(i)}\}_{i=1, ..., m}, \{y^{(j)}\}_{j=1, ..., n}) \\
@@ -97,7 +108,7 @@ which objective function?
 
 Since there are many ways, often incompatible, of including images (e.g., with
 experimental results) in a LaTeX document, below is an example of how to do
-this \cite{Lamp86}.
+this.
 
 % Below is an example of how to insert images. Delete the ``\vspace'' line,
 % uncomment the preceding line ``\centerline...'' and replace ``imageX.ps''
@@ -141,7 +152,7 @@ this \cite{Lamp86}.
 \section{CONCLUSION}
 \label{sec:CONC}
 
-Here is a citation \cite{C2}. 
+Write a conclusion. 
 
 % References should be produced using the bibtex program from suitable
 % BiBTeX files (here: strings, refs, manuals). The IEEEbib.bst bibliography
