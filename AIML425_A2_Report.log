@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2022.2.21)  16 AUG 2022 20:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2022.2.21)  19 AUG 2022 19:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -105,7 +105,14 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count271
 \l__pdf_internal_box=\box52
-) (./AIML425_A2_Report.aux)
+) (./AIML425_A2_Report.aux
+
+LaTeX Warning: Label `fig:res' multiply defined.
+
+
+LaTeX Warning: Label `fig:res' multiply defined.
+
+)
 \openout1 = `AIML425_A2_Report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
@@ -130,80 +137,73 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Underfull \vbox (badness 1655) has occurred while \output is active []
+
+LaTeX Warning: Citation `parisi1998car' on page 1 undefined on input line 39.
 
 
-LaTeX Warning: Citation `Lamp86' on page 1 undefined on input line 97.
+LaTeX Warning: Citation `naranjo2020review' on page 1 undefined on input line 3
+9.
 
-Package epstopdf Info: Source file: <image1.eps>
-(epstopdf)                    date: 2019-05-07 15:33:44
-(epstopdf)                    size: 22626 bytes
-(epstopdf)             Output file: <image1-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-07-07 12:38:19
-(epstopdf)                    size: 5818 bytes
-(epstopdf)             Command: <repstopdf --outfile=image1-eps-converted-to.pd
-f image1.eps>
-(epstopdf)             \includegraphics on input line 107.
-Package epstopdf Info: Output file is already uptodate.
-<image1-eps-converted-to.pdf, id=1, 261.97874pt x 58.2175pt>
-File: image1-eps-converted-to.pdf Graphic file (type pdf)
-<use image1-eps-converted-to.pdf>
-Package pdftex.def Info: image1-eps-converted-to.pdf  used on input line 107.
-(pdftex.def)             Requested size: 241.84842pt x 53.7455pt.
-Package epstopdf Info: Source file: <image3.eps>
-(epstopdf)                    date: 2019-05-07 15:33:44
-(epstopdf)                    size: 22611 bytes
-(epstopdf)             Output file: <image3-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-07-07 12:38:19
-(epstopdf)                    size: 5227 bytes
-(epstopdf)             Command: <repstopdf --outfile=image3-eps-converted-to.pd
-f image3.eps>
-(epstopdf)             \includegraphics on input line 114.
-Package epstopdf Info: Output file is already uptodate.
-<image3-eps-converted-to.pdf, id=2, 231.86626pt x 143.53625pt>
-File: image3-eps-converted-to.pdf Graphic file (type pdf)
-<use image3-eps-converted-to.pdf>
-Package pdftex.def Info: image3-eps-converted-to.pdf  used on input line 114.
-(pdftex.def)             Requested size: 113.81102pt x 70.45602pt.
-Package epstopdf Info: Source file: <image4.eps>
-(epstopdf)                    date: 2019-05-07 15:33:46
-(epstopdf)                    size: 21590 bytes
-(epstopdf)             Output file: <image4-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-07-07 12:38:20
-(epstopdf)                    size: 4919 bytes
-(epstopdf)             Command: <repstopdf --outfile=image4-eps-converted-to.pd
-f image4.eps>
-(epstopdf)             \includegraphics on input line 121.
-Package epstopdf Info: Output file is already uptodate.
-<image4-eps-converted-to.pdf, id=3, 231.86626pt x 143.53625pt>
-File: image4-eps-converted-to.pdf Graphic file (type pdf)
-<use image4-eps-converted-to.pdf>
-Package pdftex.def Info: image4-eps-converted-to.pdf  used on input line 121.
-(pdftex.def)             Requested size: 113.81102pt x 70.45602pt.
 
-LaTeX Warning: Citation `C2' on page 1 undefined on input line 141.
+LaTeX Warning: Citation `wilimitis_2019' on page 1 undefined on input line 49.
 
-(./AIML425_A2_Report.bbl [1{/home/chad/.TinyTeX/texmf-var/fonts/map/pdftex/updm
-ap/pdftex.map}
+
+LaTeX Warning: Citation `hofmann2008kernel' on page 1 undefined on input line 4
+9.
+
+[1{/home/chad/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
-]) [2
-
- <./image1-eps-converted-to.pdf> <./image3-eps-converted-to.pdf> <./image4-eps-
-converted-to.pdf>] (./AIML425_A2_Report.aux)
+]
+<f1_0.01_300_1000.png, id=17, 505.89pt x 144.54pt>
+File: f1_0.01_300_1000.png Graphic file (type png)
+<use f1_0.01_300_1000.png>
+Package pdftex.def Info: f1_0.01_300_1000.png  used on input line 87.
+(pdftex.def)             Requested size: 241.84842pt x 69.10051pt.
+<f2a_0.01_300_1000.png, id=19, 505.89pt x 144.54pt>
+File: f2a_0.01_300_1000.png Graphic file (type png)
+<use f2a_0.01_300_1000.png>
+Package pdftex.def Info: f2a_0.01_300_1000.png  used on input line 93.
+(pdftex.def)             Requested size: 241.84842pt x 69.10051pt.
+<f1_1e-06_300_1000.png, id=20, 505.89pt x 144.54pt>
+File: f1_1e-06_300_1000.png Graphic file (type png)
+<use f1_1e-06_300_1000.png>
+Package pdftex.def Info: f1_1e-06_300_1000.png  used on input line 107.
+(pdftex.def)             Requested size: 241.84842pt x 69.10051pt.
+<f2a_1e-06_300_1000.png, id=21, 505.89pt x 144.54pt>
+File: f2a_1e-06_300_1000.png Graphic file (type png)
+<use f2a_1e-06_300_1000.png>
+Package pdftex.def Info: f2a_1e-06_300_1000.png  used on input line 113.
+(pdftex.def)             Requested size: 241.84842pt x 69.10051pt.
+<f1_1_300_1000.png, id=22, 505.89pt x 144.54pt>
+File: f1_1_300_1000.png Graphic file (type png)
+<use f1_1_300_1000.png>
+Package pdftex.def Info: f1_1_300_1000.png  used on input line 127.
+(pdftex.def)             Requested size: 241.84842pt x 69.10051pt.
+<f2a_1_300_1000.png, id=23, 505.89pt x 144.54pt>
+File: f2a_1_300_1000.png Graphic file (type png)
+<use f2a_1_300_1000.png>
+Package pdftex.def Info: f2a_1_300_1000.png  used on input line 133.
+(pdftex.def)             Requested size: 241.84842pt x 69.10051pt.
+(./AIML425_A2_Report.bbl) [2 <./f1_0.01_300_1000.png> <./f2a_0.01_300_1000.png>
+ <./f1_1e-06_300_1000.png> <./f2a_1e-06_300_1000.png> <./f1_1_300_1000.png> <./
+f2a_1_300_1000.png>] (./AIML425_A2_Report.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 1894 strings out of 480238
- 29970 string characters out of 5895836
- 326885 words of memory out of 5000000
- 19836 multiletter control sequences out of 15000+600000
+ 1841 strings out of 480238
+ 29482 string characters out of 5895836
+ 327892 words of memory out of 5000000
+ 19792 multiletter control sequences out of 15000+600000
  486127 words of font info for 58 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 55i,11n,62p,734b,287s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,11n,62p,914b,290s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/home/chad/.TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}</home/chad/.Tiny
 TeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></home/chad/.TinyTeX/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/chad/.TinyTeX/texmf-
@@ -215,10 +215,10 @@ amsfonts/cm/cmsy7.pfb></home/chad/.TinyTeX/texmf-dist/fonts/type1/urw/times/utm
 b8a.pfb></home/chad/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></hom
 e/chad/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></home/chad/.TinyTe
 X/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on AIML425_A2_Report.pdf (2 pages, 131464 bytes).
+Output written on AIML425_A2_Report.pdf (2 pages, 332880 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
- 49 compressed objects within 1 object stream
+ 80 PDF objects out of 1000 (max. 8388607)
+ 41 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

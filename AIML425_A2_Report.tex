@@ -73,74 +73,74 @@ MMD&(\{x^{(i)}\}_{i=1, ..., m}, \{y^{(j)}\}_{j=1, ..., n}) \\
 $$
 
 
-
-
-The theory:  
-Why obective functions?
-- machine learning applies models to iteratively improve performance at generating a desired output (ref)
-- improves by 'moving' actual outputs closer to desired outputs, using an objective function tht calculates the difference or similarity between the actual output an the desired output
-- can be applied at the level of individual instances or across the distribution of input and output sets
-why regularisation?
-- list the options and distinguish between the options (method, output, application)
-- link the selected option with this problem 
-  - which will be the best for low/high outliers
-  - which will be the best for 
-which objective function?
-
-- map the math
-- 
-
 %
 \section{RESULTS}
 \label{sec:results}
 %
+The results show that training a network to learn a Gaussian to Uniform distribution is fairly successful, evidenced by the similarity between the target data and the test data for the first part of the training.  Some of the learned network projects outside of the target area (i.e. greater than 1), which is likely an error in the transformation math (i.e. no epxlicit constraint placed on the output of the $f_1$ network.  Training the network from uniform to Gaussian was less successful, resulting in a skewed dataset with a high proportion of datapoints near the mean, but not is equally spread as the training data.  This is apparent in the training data being spread evenly across the two dimensions resulting in a circular distributin on the plot.
+there is a difference between regularisation values at $L2 = {1e^{-6}, 1e^{-2}, 1}$, but it is diffiult to discern from the plots.  Best performance across both networks ($f_1$ an $f_{2a}$) was achieved with $L2 = 1e^{-6}$, followed by $L2 = 1e^{-2}$ and then $L2 = 1$.  
 
-
-\subsection{Subheadings}
-\label{ssec:subhead}
-
-\subsubsection{Sub-subheadings}
-\label{sssec:subsubhead}
-
-
-\section{ILLUSTRATIONS, GRAPHS, AND PHOTOGRAPHS}
-\label{sec:illust}
-
-Since there are many ways, often incompatible, of including images (e.g., with
-experimental results) in a LaTeX document, below is an example of how to do
-this.
-
-% Below is an example of how to insert images. Delete the ``\vspace'' line,
-% uncomment the preceding line ``\centerline...'' and replace ``imageX.ps''
-% with a suitable PostScript file name.
-% -------------------------------------------------------------------------
 \begin{figure}[htb]
 
-\begin{minipage}[b]{1.0\linewidth}
+\begin{minipage}[b]{1\linewidth}
   \centering
-  \centerline{\includegraphics[width=8.5cm]{image1}}
+  \centerline{\includegraphics[width=8.5cm]{f1_0.01_300_1000}}
 %  \vspace{2.0cm}
-  \centerline{(a) Result 1}\medskip
+\end{minipage}
+%  \vspace{2.0cm}
+\begin{minipage}[b]{1\linewidth}
+  \centering
+  \centerline{\includegraphics[width=8.5cm]{f2a_0.01_300_1000}}
+%  \vspace{2.0cm}
 \end{minipage}
 %
-\begin{minipage}[b]{.48\linewidth}
-  \centering
-  \centerline{\includegraphics[width=4.0cm]{image3}}
-%  \vspace{1.5cm}
-  \centerline{(b) Results 3}\medskip
-\end{minipage}
-\hfill
-\begin{minipage}[b]{0.48\linewidth}
-  \centering
-  \centerline{\includegraphics[width=4.0cm]{image4}}
-%  \vspace{1.5cm}
-  \centerline{(c) Result 4}\medskip
-\end{minipage}
-%
-\caption{Example of placing a figure with experimental results.}
+\caption{$f_1$ and $f_{2a}: L2 = 1e^{-2}$}
 \label{fig:res}
 %
 \end{figure}
+
+When $L2 = 0.01$, the $f_1$ network trains well, with good spread of data, mostly contained within the bounds of 0 and 1.  The $f_{2a}$ network doesn't learn so well, the input data forming a two orthogonal, normal distributions, but the test output fails to train so well, with strong centralisation of data and a general tendency towards positive values.
+
+\begin{figure}[htb]
+\begin{minipage}[b]{1\linewidth}
+  \centering
+  \centerline{\includegraphics[width=8.5cm]{f1_1e-06_300_1000}}
+%  \vspace{1.5cm}
+\end{minipage}
+%
+\begin{minipage}[b]{1\linewidth}
+  \centering
+  \centerline{\includegraphics[width=8.5cm]{f2a_1e-06_300_1000}}
+%  \vspace{1.5cm}
+\end{minipage}
+%
+\caption{$f_1$ and $f_{2a}$, $L2 = 1e^{-6}$}
+\label{fig:res}
+%
+\end{figure}
+
+When $L2 = 1e^{-6}$, the $f_1$ network again trains well, with good spread of data, mostly contained within the bounds of 0 and 1.  The $f_{2a}$ network doesn't learn so well, the input data forming two orthogonal, normal distributions, but the test output again tends toward positive values.
+
+\begin{figure}[htb]
+\begin{minipage}[b]{1\linewidth}
+  \centering
+  \centerline{\includegraphics[width=8.5cm]{f1_1_300_1000}}
+%  \vspace{1.5cm}
+\end{minipage}
+%
+\begin{minipage}[b]{1\linewidth}
+  \centering
+  \centerline{\includegraphics[width=8.5cm]{f2a_1_300_1000}}
+%  \vspace{1.5cm}
+\end{minipage}
+%
+\caption{$f_1$ and $f_{2a}$, $L2 = 1$}
+\label{fig:res}
+
+\end{figure}
+\hfill
+
+When $L2 = 1$, both the $f_1$ and $f_{2a}$ networks both train and deliver similar outputs as with previous levels of L2 regularisation, however, performance is not as good, with loss, predictably 2 orders of magnitude higher than when $L2 = 1e^{-2}$.
 
 
 % To start a new column (but not a new page) and help balance the last-page
